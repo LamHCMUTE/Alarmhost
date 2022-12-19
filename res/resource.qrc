@@ -1,0 +1,30 @@
+<RCC>
+  <qresource prefix="imgs">
+    <file>img/br.png</file>
+    <file>img/lo1.png</file>
+    <file>img/background.png</file>
+    <file>img/2.png</file>
+    <file>img/background1.png</file>
+    <file>img/lo.png</file>
+    <file>img/cam.png</file>
+    <file>img/line.png</file>
+  </qresource>
+  <qresource prefix="icons">
+    <file>icon/1.png</file>
+    <file>icon/2.png</file>
+    <file>icon/3.png</file>
+    <file>icon/4.png</file>
+    <file>icon/5.png</file>
+    <file>icon/6.png</file>
+    <file>icon/date.png</file>
+    <file>icon/down.png</file>
+    <file>icon/home.png</file>
+    <file>icon/left.png</file>
+    <file>icon/line.png</file>
+    <file>icon/pause.png</file>
+    <file>icon/right.png</file>
+    <file>icon/sound.png</file>
+    <file>icon/time.png</file>
+    <file>icon/zoom.png</file>
+  </qresource>
+</RCC>
