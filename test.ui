@@ -972,8 +972,14 @@ background: rgba(85, 89, 93, 0.5);
                <height>428</height>
               </size>
              </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
              <property name="frameShape">
               <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Sunken</enum>
              </property>
              <property name="text">
               <string/>
@@ -1019,19 +1025,16 @@ background: rgba(85, 89, 93, 0.5);
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background: rgba(85, 89, 93, 0.5);</string>
+                <string notr="true">background: rgba(85, 89, 93, 0.5);
+border-right: 1px solid #000000;</string>
                </property>
                <property name="text">
                 <string/>
                </property>
-               <property name="icon">
-                <iconset>
-                 <normaloff>res/icon/pause.png</normaloff>res/icon/pause.png</iconset>
-               </property>
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="StopButton">
+              <widget class="QLabel" name="n">
                <property name="maximumSize">
                 <size>
                  <width>9</width>
@@ -1486,6 +1489,9 @@ color: #FFFFFF;</string>
                    </property>
                    <property name="text">
                     <string>Trạng thái xử lí</string>
+                   </property>
+                   <property name="textFormat">
+                    <enum>Qt::AutoText</enum>
                    </property>
                   </widget>
                  </item>

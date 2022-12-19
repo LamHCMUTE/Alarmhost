@@ -1,17 +1,15 @@
 <RCC>
   <qresource prefix="imgs">
-    <file>img/br.png</file>
     <file>img/lo1.png</file>
-    <file>img/background.png</file>
     <file>img/2.png</file>
-    <file>img/background1.png</file>
     <file>img/lo.png</file>
     <file>img/cam.png</file>
     <file>img/line.png</file>
   </qresource>
   <qresource prefix="icons">
+    <file>icon/stop.png</file>
+    <file>icon/stop.png</file>
     <file>icon/1.png</file>
-    <file>icon/2.png</file>
     <file>icon/3.png</file>
     <file>icon/4.png</file>
     <file>icon/5.png</file>

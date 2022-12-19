@@ -5,7 +5,9 @@ from time import sleep
 
 import cv2
 from PyQt5.QtCore import QThread, pyqtSignal, Qt
-from PyQt5.QtGui import QImage, QPixmap
+from PyQt5.QtGui import QImage, QPixmap, QIcon
+from PyQt5.uic.properties import QtGui, QtCore
+
 from test import Ui_Main
 
 class ThreadStreamVideo(QThread):
@@ -64,19 +66,14 @@ class MainWindow(QMainWindow, Ui_Main):
         if self.count == 0:
             self.th1.start()
             self.count = 1
-            self.StartButton.setText("Pause")
+            self.StartButton.setIcon(QIcon(QPixmap('res\icon\pause.png')))
         else:
             self.th1.stop()
             self.count = 0
-            self.StartButton.setText("Play")
-
+            self.StartButton.setIcon(QIcon(QPixmap('res\icon\stop.png')))
 
     def setImage(self, image):
         self.lbCam.setPixmap(QPixmap.fromImage(image))
-
-
-
-
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     main_win = MainWindow()
