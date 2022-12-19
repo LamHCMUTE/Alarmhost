@@ -302,7 +302,7 @@ flex-grow: 0;</string>
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="comboBox">
+          <widget class="QComboBox" name="BxCam">
            <property name="maximumSize">
             <size>
              <width>119</width>
@@ -333,16 +333,6 @@ border-radius: 3px;</string>
            <property name="editable">
             <bool>false</bool>
            </property>
-           <item>
-            <property name="text">
-             <string>Tất cả</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>l</string>
-            </property>
-           </item>
           </widget>
          </item>
          <item>

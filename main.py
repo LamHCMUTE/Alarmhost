@@ -1,4 +1,6 @@
 import sys
+from email.mime import image
+
 # pip install pyqt5
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from time import sleep
@@ -17,7 +19,9 @@ class ThreadStreamVideo(QThread):
     def __init__(self,):
         super(ThreadStreamVideo, self,).__init__()
         self.cap = None
-        self.rtsp = 'rtsp://client:User@view2022@113.160.97.99:1554/cam/realmonitor?channel=1&subtype=1'
+        self.rtsp = 'rtsp://client:User@view2022@113.160.97.99:4554/cam/realmonitor?channel=1&subtype=1'
+        self.rtsp = 'rtsp://client:User@view2022@113.160.97.99:2554/cam/realmonitor?channel=1&subtype=1'
+        self.rtsp = 'rtsp://client:User@view2022@113.160.97.99:5554/cam/realmonitor?channel=1&subtype=1'
         self.threadactive = None
         self.frame = None
     def run(self):
@@ -49,28 +53,34 @@ class ThreadStreamVideo(QThread):
         self.threadactive = False
         self.quit()
 
+
 class MainWindow(QMainWindow, Ui_Main):
     def __init__(self):
         super(MainWindow,self).__init__()
         self.setupUi(self)
+        list=['Tất cả','Cam 1','Cam 2']
+        for x in list:
+            self.BxCam.addItem(x)
+        self.BxCam.currentIndexChanged.connect(self.cam)
+
+    def cam(self):
         self.th1 = ThreadStreamVideo()
-        self.th1.rtsp = 'rtsp://client:User@view2022@113.160.97.99:1554/cam/realmonitor?channel=1&subtype=1'
+        self.th1.rtsp = 'rtsp://client:User@view2022@113.160.97.99:4554/cam/realmonitor?channel=1&subtype=1'
         self.th1.changePixmap.connect(self.setImage)
-
         self.th1.threadactive = True
-        self.count=0
-        # self.th1.start()
-
+        self.th1.start()
+        self.count = 0
         self.StartButton.clicked.connect(self.starton)
+
     def starton(self):
         if self.count == 0:
-            self.th1.start()
-            self.count = 1
-            self.StartButton.setIcon(QIcon(QPixmap('res\icon\pause.png')))
-        else:
             self.th1.stop()
-            self.count = 0
+            self.count = 1
             self.StartButton.setIcon(QIcon(QPixmap('res\icon\stop.png')))
+        else:
+            self.th1.start()
+            self.count = 0
+            self.StartButton.setIcon(QIcon(QPixmap('res\icon\pause.png')))
 
     def setImage(self, image):
         self.lbCam.setPixmap(QPixmap.fromImage(image))

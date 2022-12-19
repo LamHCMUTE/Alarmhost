@@ -139,9 +139,9 @@ class Ui_Main(object):
         self.pushButton.setIconSize(QtCore.QSize(29, 20))
         self.pushButton.setObjectName("pushButton")
         self.horizontalLayout_3.addWidget(self.pushButton)
-        self.comboBox = QtWidgets.QComboBox(self.horizontalFrame_2)
-        self.comboBox.setMaximumSize(QtCore.QSize(119, 16777215))
-        self.comboBox.setStyleSheet("font-family: \'Inte\';\n"
+        self.BxCam = QtWidgets.QComboBox(self.horizontalFrame_2)
+        self.BxCam.setMaximumSize(QtCore.QSize(119, 16777215))
+        self.BxCam.setStyleSheet("font-family: \'Inte\';\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "font: 12px;\n"
@@ -160,11 +160,9 @@ class Ui_Main(object):
 "\n"
 "border: 1px solid rgba(255, 255, 255, 0.5);\n"
 "border-radius: 3px;")
-        self.comboBox.setEditable(False)
-        self.comboBox.setObjectName("comboBox")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.horizontalLayout_3.addWidget(self.comboBox)
+        self.BxCam.setEditable(False)
+        self.BxCam.setObjectName("BxCam")
+        self.horizontalLayout_3.addWidget(self.BxCam)
         spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_3.addItem(spacerItem1)
         self.verticalLayout_2.addWidget(self.horizontalFrame_2)
@@ -894,8 +892,6 @@ class Ui_Main(object):
         Main.setWindowTitle(_translate("Main", "MainWindow"))
         self.pushButton_7.setText(_translate("Main", "01/11/2022"))
         self.pushButton.setText(_translate("Main", "02/12/2022"))
-        self.comboBox.setItemText(0, _translate("Main", "Tất cả"))
-        self.comboBox.setItemText(1, _translate("Main", "l"))
         self.label_7.setText(_translate("Main", "Thời gian"))
         self.label_6.setText(_translate("Main", "Loại cảnh báo"))
         self.label_5.setText(_translate("Main", "Thiết bị cảnh báo"))
