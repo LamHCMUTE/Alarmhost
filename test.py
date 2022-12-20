@@ -510,6 +510,9 @@ class Ui_Main(object):
         self.StartButton.setStyleSheet("background: rgba(85, 89, 93, 0.5);\n"
 "border-right: 1px solid #000000;")
         self.StartButton.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("res/icon/pause.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.StartButton.setIcon(icon1)
         self.StartButton.setObjectName("StartButton")
         self.horizontalLayout_8.addWidget(self.StartButton)
         self.n = QtWidgets.QLabel(self.a)

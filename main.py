@@ -62,10 +62,16 @@ class MainWindow(QMainWindow, Ui_Main):
         for x in list:
             self.BxCam.addItem(x)
         self.BxCam.currentIndexChanged.connect(self.cam)
-
+        # self.th1 = ThreadStreamVideo()
+        # self.th1.rtsp = 'rtsp://client:User@view2022@113.160.97.99:1554/cam/realmonitor?channel=1&subtype=1'
+        # self.th1.changePixmap.connect(self.setImage)
+        # self.th1.threadactive = True
+        # self.th1.start()
+        # self.count = 0
+        # self.StartButton.clicked.connect(self.starton)
     def cam(self):
         self.th1 = ThreadStreamVideo()
-        self.th1.rtsp = 'rtsp://client:User@view2022@113.160.97.99:4554/cam/realmonitor?channel=1&subtype=1'
+        self.th1.rtsp = 'rtsp://client:User@view2022@113.160.97.99:1554/cam/realmonitor?channel=1&subtype=1'
         self.th1.changePixmap.connect(self.setImage)
         self.th1.threadactive = True
         self.th1.start()
