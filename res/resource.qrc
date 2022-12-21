@@ -9,6 +9,7 @@
   <qresource prefix="icons">
     <file>icon/stop.png</file>
     <file>icon/stop.png</file>
+    <file>icon/home.svg</file>
     <file>icon/1.png</file>
     <file>icon/3.png</file>
     <file>icon/4.png</file>

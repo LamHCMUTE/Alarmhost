@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Main(object):
     def setupUi(self, Main):
         Main.setObjectName("Main")
-        Main.resize(1243, 601)
+        Main.resize(1089, 681)
         Main.setWindowOpacity(1.0)
         Main.setStyleSheet("")
         Main.setDockNestingEnabled(True)
@@ -43,40 +43,106 @@ class Ui_Main(object):
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
-        self.label_27 = QtWidgets.QLabel(self.verticalFrame)
-        self.label_27.setMaximumSize(QtCore.QSize(50, 50))
-        self.label_27.setText("")
-        self.label_27.setPixmap(QtGui.QPixmap("res/icon/home.png"))
-        self.label_27.setScaledContents(True)
-        self.label_27.setObjectName("label_27")
-        self.verticalLayout.addWidget(self.label_27)
-        self.label_33 = QtWidgets.QLabel(self.verticalFrame)
-        self.label_33.setMaximumSize(QtCore.QSize(50, 50))
-        self.label_33.setText("")
-        self.label_33.setPixmap(QtGui.QPixmap("res/icon/1.png"))
-        self.label_33.setScaledContents(True)
-        self.label_33.setObjectName("label_33")
-        self.verticalLayout.addWidget(self.label_33)
+        self.home = QtWidgets.QPushButton(self.verticalFrame)
+        self.home.setMinimumSize(QtCore.QSize(0, 50))
+        self.home.setStyleSheet("QPushButton{\n"
+"    background-image: url(:/icons/icon/home.svg);\n"
+"box-sizing: border-box;\n"
+"\n"
+"position: absolute;\n"
+"left: 0%;\n"
+"right: 0%;\n"
+"top: 0%;\n"
+"bottom: 0%;\n"
+"\n"
+"/* 2c3e4c */\n"
+"\n"
+"background: #2C3E4C;\n"
+"/* f1f1f1 */\n"
+"\n"
+"border: 1px solid #F1F1F1;\n"
+"border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"box-sizing: border-box;\n"
+"position: absolute;\n"
+"left: 0%;\n"
+"right: 0%;\n"
+"top: 0%;\n"
+"bottom: 54.55%;\n"
+"background: #55595D;\n"
+"/* f1f1f1 */\n"
+"border: 1px solid #F1F1F1;\n"
+"border-radius: 10px;\n"
+"}\n"
+"\n"
+"")
+        self.home.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("res/icon/home.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.home.setIcon(icon)
+        self.home.setObjectName("home")
+        self.verticalLayout.addWidget(self.home)
+        self.clock = QtWidgets.QPushButton(self.verticalFrame)
+        self.clock.setMinimumSize(QtCore.QSize(0, 50))
+        self.clock.setStyleSheet("QPushButton{\n"
+"    background-image: url(:/icons/icon/home.svg);\n"
+"box-sizing: border-box;\n"
+"\n"
+"position: absolute;\n"
+"left: 0%;\n"
+"right: 0%;\n"
+"top: 0%;\n"
+"bottom: 0%;\n"
+"\n"
+"/* 2c3e4c */\n"
+"\n"
+"background: #2C3E4C;\n"
+"/* f1f1f1 */\n"
+"\n"
+"border: 1px solid #F1F1F1;\n"
+"border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"box-sizing: border-box;\n"
+"position: absolute;\n"
+"left: 0%;\n"
+"right: 0%;\n"
+"top: 0%;\n"
+"bottom: 54.55%;\n"
+"background: #55595D;\n"
+"/* f1f1f1 */\n"
+"border: 1px solid #F1F1F1;\n"
+"border-radius: 10px;\n"
+"}\n"
+"\n"
+"")
+        self.clock.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("res/icon/clock.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.clock.setIcon(icon1)
+        self.clock.setObjectName("clock")
+        self.verticalLayout.addWidget(self.clock)
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem)
         self.label_35 = QtWidgets.QLabel(self.verticalFrame)
         self.label_35.setMaximumSize(QtCore.QSize(40, 40))
         self.label_35.setText("")
-        self.label_35.setPixmap(QtGui.QPixmap("res/icon/3.png"))
+        self.label_35.setPixmap(QtGui.QPixmap("res/icon/sun.png"))
         self.label_35.setScaledContents(True)
         self.label_35.setObjectName("label_35")
         self.verticalLayout.addWidget(self.label_35)
         self.label_36 = QtWidgets.QLabel(self.verticalFrame)
         self.label_36.setMaximumSize(QtCore.QSize(40, 40))
         self.label_36.setText("")
-        self.label_36.setPixmap(QtGui.QPixmap("res/icon/4.png"))
+        self.label_36.setPixmap(QtGui.QPixmap("res/icon/ring.png"))
         self.label_36.setScaledContents(True)
         self.label_36.setObjectName("label_36")
         self.verticalLayout.addWidget(self.label_36)
         self.label_34 = QtWidgets.QLabel(self.verticalFrame)
         self.label_34.setMaximumSize(QtCore.QSize(40, 40))
         self.label_34.setText("")
-        self.label_34.setPixmap(QtGui.QPixmap("res/icon/5.png"))
+        self.label_34.setPixmap(QtGui.QPixmap("res/icon/account.png"))
         self.label_34.setScaledContents(True)
         self.label_34.setObjectName("label_34")
         self.verticalLayout.addWidget(self.label_34)
@@ -96,12 +162,16 @@ class Ui_Main(object):
         self.verticalLayout_8.setObjectName("verticalLayout_8")
         self.horizontalLayout_15 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_15.setObjectName("horizontalLayout_15")
+        self.label_2 = QtWidgets.QLabel(self.horizontalFrame_2)
+        self.label_2.setMaximumSize(QtCore.QSize(20, 16777215))
+        self.label_2.setObjectName("label_2")
+        self.horizontalLayout_15.addWidget(self.label_2)
         self.Btlich = QtWidgets.QPushButton(self.horizontalFrame_2)
         self.Btlich.setMaximumSize(QtCore.QSize(20, 16777215))
         self.Btlich.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("res/icon/Calender.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.Btlich.setIcon(icon)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("res/icon/Calender.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.Btlich.setIcon(icon2)
         self.Btlich.setIconSize(QtCore.QSize(18, 18))
         self.Btlich.setObjectName("Btlich")
         self.horizontalLayout_15.addWidget(self.Btlich)
@@ -175,7 +245,7 @@ class Ui_Main(object):
         self.Btlich_1 = QtWidgets.QPushButton(self.horizontalFrame_2)
         self.Btlich_1.setMaximumSize(QtCore.QSize(20, 16777215))
         self.Btlich_1.setText("")
-        self.Btlich_1.setIcon(icon)
+        self.Btlich_1.setIcon(icon2)
         self.Btlich_1.setIconSize(QtCore.QSize(18, 18))
         self.Btlich_1.setObjectName("Btlich_1")
         self.horizontalLayout_16.addWidget(self.Btlich_1)
@@ -241,9 +311,9 @@ class Ui_Main(object):
         self.pushButton_2.setMaximumSize(QtCore.QSize(20, 16777215))
         self.pushButton_2.setObjectName("pushButton_2")
         self.horizontalLayout_3.addWidget(self.pushButton_2)
-        self.BxCam = QtWidgets.QComboBox(self.horizontalFrame_2)
-        self.BxCam.setMaximumSize(QtCore.QSize(119, 16777215))
-        self.BxCam.setStyleSheet("font-family: \'Inte\';\n"
+        self.bxCam = QtWidgets.QComboBox(self.horizontalFrame_2)
+        self.bxCam.setMaximumSize(QtCore.QSize(119, 16777215))
+        self.bxCam.setStyleSheet("font-family: \'Inte\';\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "font: 12px;\n"
@@ -262,9 +332,9 @@ class Ui_Main(object):
 "\n"
 "border: 1px solid rgba(255, 255, 255, 0.5);\n"
 "border-radius: 3px;")
-        self.BxCam.setEditable(False)
-        self.BxCam.setObjectName("BxCam")
-        self.horizontalLayout_3.addWidget(self.BxCam)
+        self.bxCam.setEditable(False)
+        self.bxCam.setObjectName("bxCam")
+        self.horizontalLayout_3.addWidget(self.bxCam)
         spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_3.addItem(spacerItem1)
         self.verticalLayout_2.addWidget(self.horizontalFrame_2)
@@ -279,313 +349,80 @@ class Ui_Main(object):
         self.Layouttime.setStyleSheet("#Layouttime{\n"
 "background: rgba(85, 89, 93, 0.5);\n"
 "border-right: 1px solid #000000;\n"
-"}")
+"}\n"
+"")
         self.Layouttime.setObjectName("Layouttime")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.Layouttime)
         self.verticalLayout_4.setContentsMargins(0, -1, 0, -1)
         self.verticalLayout_4.setSpacing(0)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
-        self.Title = QtWidgets.QFrame(self.Layouttime)
-        self.Title.setStyleSheet("Title{\n"
-"background: rgba(85, 89, 93, 0.5);\n"
-"border-right: 1px solid #000000;\n"
-"}")
-        self.Title.setObjectName("Title")
-        self.horizontalLayout = QtWidgets.QHBoxLayout(self.Title)
-        self.horizontalLayout.setContentsMargins(18, 18, 18, 18)
-        self.horizontalLayout.setSpacing(6)
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        self.label_7 = QtWidgets.QLabel(self.Title)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_7.sizePolicy().hasHeightForWidth())
-        self.label_7.setSizePolicy(sizePolicy)
-        self.label_7.setMaximumSize(QtCore.QSize(122, 16777215))
-        self.label_7.setStyleSheet("position: absolute;\n"
-"width: 57px;\n"
-"height: 16px;\n"
-"left: 77.33px;\n"
-"top: 69.58px;\n"
-"\n"
-"font-family: \'Inter\';\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"font-size: 13px;\n"
-"line-height: 16px;\n"
-"/* identical to box height */\n"
-"\n"
-"\n"
-"color: #FFFFFF;\n"
-"")
-        self.label_7.setObjectName("label_7")
-        self.horizontalLayout.addWidget(self.label_7)
-        spacerItem2 = QtWidgets.QSpacerItem(10, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem2)
-        self.label_6 = QtWidgets.QLabel(self.Title)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_6.sizePolicy().hasHeightForWidth())
-        self.label_6.setSizePolicy(sizePolicy)
-        self.label_6.setStyleSheet("position: absolute;\n"
-"width: 57px;\n"
-"height: 16px;\n"
-"left: 77.33px;\n"
-"top: 69.58px;\n"
-"\n"
-"font-family: \'Inter\';\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"font-size: 13px;\n"
-"line-height: 16px;\n"
-"/* identical to box height */\n"
-"\n"
-"\n"
-"color: #FFFFFF;\n"
-"")
-        self.label_6.setObjectName("label_6")
-        self.horizontalLayout.addWidget(self.label_6)
-        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem3)
-        self.label_5 = QtWidgets.QLabel(self.Title)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_5.sizePolicy().hasHeightForWidth())
-        self.label_5.setSizePolicy(sizePolicy)
-        self.label_5.setStyleSheet("position: absolute;\n"
-"width: 57px;\n"
-"height: 16px;\n"
-"left: 77.33px;\n"
-"top: 69.58px;\n"
-"\n"
-"font-family: \'Inter\';\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"font-size: 13px;\n"
-"line-height: 16px;\n"
-"/* identical to box height */\n"
-"\n"
-"\n"
-"color: #FFFFFF;\n"
-"")
-        self.label_5.setObjectName("label_5")
-        self.horizontalLayout.addWidget(self.label_5)
-        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem4)
-        self.label_4 = QtWidgets.QLabel(self.Title)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_4.sizePolicy().hasHeightForWidth())
-        self.label_4.setSizePolicy(sizePolicy)
-        self.label_4.setStyleSheet("position: absolute;\n"
-"width: 57px;\n"
-"height: 16px;\n"
-"left: 77.33px;\n"
-"top: 69.58px;\n"
-"\n"
-"font-family: \'Inter\';\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"font-size: 13px;\n"
-"line-height: 16px;\n"
-"/* identical to box height */\n"
-"\n"
-"\n"
-"color: #FFFFFF;\n"
-"")
-        self.label_4.setObjectName("label_4")
-        self.horizontalLayout.addWidget(self.label_4)
-        spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem5)
-        self.label_3 = QtWidgets.QLabel(self.Title)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_3.sizePolicy().hasHeightForWidth())
-        self.label_3.setSizePolicy(sizePolicy)
-        self.label_3.setStyleSheet("position: absolute;\n"
-"width: 57px;\n"
-"height: 16px;\n"
-"left: 77.33px;\n"
-"top: 69.58px;\n"
-"\n"
-"font-family: \'Inter\';\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"font-size: 13px;\n"
-"line-height: 16px;\n"
-"/* identical to box height */\n"
-"\n"
-"\n"
-"color: #FFFFFF;\n"
-"")
-        self.label_3.setObjectName("label_3")
-        self.horizontalLayout.addWidget(self.label_3)
-        self.verticalLayout_4.addWidget(self.Title)
-        self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_6.setSpacing(0)
-        self.horizontalLayout_6.setObjectName("horizontalLayout_6")
-        self.line = QtWidgets.QFrame(self.Layouttime)
-        self.line.setFrameShape(QtWidgets.QFrame.HLine)
-        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.line.setObjectName("line")
-        self.horizontalLayout_6.addWidget(self.line)
-        self.verticalLayout_4.addLayout(self.horizontalLayout_6)
-        self.horizontalFrame_21 = QtWidgets.QFrame(self.Layouttime)
-        self.horizontalFrame_21.setStyleSheet("background: rgba(217, 217, 217, 0.2);\n"
+        self.table = QtWidgets.QWidget(self.Layouttime)
+        self.table.setStyleSheet("")
+        self.table.setObjectName("table")
+        self.horizontalLayout_18 = QtWidgets.QHBoxLayout(self.table)
+        self.horizontalLayout_18.setContentsMargins(5, 0, 5, -1)
+        self.horizontalLayout_18.setObjectName("horizontalLayout_18")
+        self.tableWidget = QtWidgets.QTableWidget(self.table)
+        self.tableWidget.setStyleSheet("QTableWidget{\n"
+"font: 24pt \"Interl\";\n"
+"color: rgb(255, 255, 255);\n"
+"box-sizing: border-box;\n"
+"width: 972.71px;\n"
+"height: 60px;\n"
+"left: 67.01px;\n"
+"top: 115.31px;\n"
+"box-sizing: border-box;\n"
+"background: transparent;\n"
+"borde-all: none;\n"
 "border-radius: 5px;\n"
-"\n"
-"position: absolute;\n"
-"width: 122px;\n"
-"height: 16px;\n"
-"left: 78.33px;\n"
-"top: 197.42px;\n"
-"\n"
 "font-family: \'Inter\';\n"
 "font-style: normal;\n"
 "font-weight: 400;\n"
 "font-size: 13px;\n"
 "line-height: 16px;\n"
 "/* identical to box height */\n"
+"}\n"
 "\n"
 "\n"
-"color: #FFFFFF;")
-        self.horizontalFrame_21.setObjectName("horizontalFrame_21")
-        self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.horizontalFrame_21)
-        self.horizontalLayout_7.setContentsMargins(18, 18, 18, 18)
-        self.horizontalLayout_7.setSpacing(6)
-        self.horizontalLayout_7.setObjectName("horizontalLayout_7")
-        self.label_12 = QtWidgets.QLabel(self.horizontalFrame_21)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_12.sizePolicy().hasHeightForWidth())
-        self.label_12.setSizePolicy(sizePolicy)
-        self.label_12.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        self.label_12.setStyleSheet("\n"
-"background: rgba(217, 217, 217, 0.2);")
-        self.label_12.setObjectName("label_12")
-        self.horizontalLayout_7.addWidget(self.label_12)
-        spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_7.addItem(spacerItem6)
-        self.label_11 = QtWidgets.QLabel(self.horizontalFrame_21)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_11.sizePolicy().hasHeightForWidth())
-        self.label_11.setSizePolicy(sizePolicy)
-        self.label_11.setMaximumSize(QtCore.QSize(117, 16777215))
-        self.label_11.setObjectName("label_11")
-        self.horizontalLayout_7.addWidget(self.label_11)
-        spacerItem7 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_7.addItem(spacerItem7)
-        self.label_10 = QtWidgets.QLabel(self.horizontalFrame_21)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_10.sizePolicy().hasHeightForWidth())
-        self.label_10.setSizePolicy(sizePolicy)
-        self.label_10.setObjectName("label_10")
-        self.horizontalLayout_7.addWidget(self.label_10)
-        spacerItem8 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_7.addItem(spacerItem8)
-        self.label_9 = QtWidgets.QLabel(self.horizontalFrame_21)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_9.sizePolicy().hasHeightForWidth())
-        self.label_9.setSizePolicy(sizePolicy)
-        self.label_9.setObjectName("label_9")
-        self.horizontalLayout_7.addWidget(self.label_9)
-        spacerItem9 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_7.addItem(spacerItem9)
-        self.label_2 = QtWidgets.QLabel(self.horizontalFrame_21)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
-        self.label_2.setSizePolicy(sizePolicy)
-        self.label_2.setStyleSheet("background: rgba(217, 217, 217, 0.2);\n"
-"border-radius: 5px;")
-        self.label_2.setObjectName("label_2")
-        self.horizontalLayout_7.addWidget(self.label_2)
-        self.verticalLayout_4.addWidget(self.horizontalFrame_21)
-        self.horizontalFrame = QtWidgets.QFrame(self.Layouttime)
-        self.horizontalFrame.setStyleSheet("position: absolute;\n"
-"width: 122px;\n"
-"height: 16px;\n"
-"left: 78.33px;\n"
-"top: 197.42px;\n"
-"\n"
-"font-family: \'Inter\';\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"font-size: 13px;\n"
-"line-height: 16px;\n"
-"/* identical to box height */\n"
-"\n"
-"\n"
-"color: #FFFFFF;")
-        self.horizontalFrame.setObjectName("horizontalFrame")
-        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.horizontalFrame)
-        self.horizontalLayout_4.setContentsMargins(18, 18, 18, 18)
-        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        self.label_15 = QtWidgets.QLabel(self.horizontalFrame)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_15.sizePolicy().hasHeightForWidth())
-        self.label_15.setSizePolicy(sizePolicy)
-        self.label_15.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        self.label_15.setStyleSheet("")
-        self.label_15.setObjectName("label_15")
-        self.horizontalLayout_4.addWidget(self.label_15)
-        spacerItem10 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem10)
-        self.label_17 = QtWidgets.QLabel(self.horizontalFrame)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_17.sizePolicy().hasHeightForWidth())
-        self.label_17.setSizePolicy(sizePolicy)
-        self.label_17.setObjectName("label_17")
-        self.horizontalLayout_4.addWidget(self.label_17)
-        spacerItem11 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem11)
-        self.label_16 = QtWidgets.QLabel(self.horizontalFrame)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_16.sizePolicy().hasHeightForWidth())
-        self.label_16.setSizePolicy(sizePolicy)
-        self.label_16.setObjectName("label_16")
-        self.horizontalLayout_4.addWidget(self.label_16)
-        spacerItem12 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem12)
-        self.label_14 = QtWidgets.QLabel(self.horizontalFrame)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_14.sizePolicy().hasHeightForWidth())
-        self.label_14.setSizePolicy(sizePolicy)
-        self.label_14.setObjectName("label_14")
-        self.horizontalLayout_4.addWidget(self.label_14)
-        spacerItem13 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem13)
-        self.label_13 = QtWidgets.QLabel(self.horizontalFrame)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_13.sizePolicy().hasHeightForWidth())
-        self.label_13.setSizePolicy(sizePolicy)
-        self.label_13.setObjectName("label_13")
-        self.horizontalLayout_4.addWidget(self.label_13)
-        self.verticalLayout_4.addWidget(self.horizontalFrame)
-        spacerItem14 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_4.addItem(spacerItem14)
+"")
+        self.tableWidget.setObjectName("tableWidget")
+        self.tableWidget.setColumnCount(5)
+        self.tableWidget.setRowCount(2)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(4, item)
+        self.horizontalLayout_18.addWidget(self.tableWidget)
+        self.verticalLayout_4.addWidget(self.table)
+        self.tableWidget_2 = QtWidgets.QTableWidget(self.Layouttime)
+        self.tableWidget_2.setStyleSheet("QTableWidget{\n"
+"box-sizing: border-box;\n"
+"width: 972.71px;\n"
+"height: 60px;\n"
+"left: 67.01px;\n"
+"top: 115.31px;\n"
+"box-sizing: border-box;\n"
+"background: transparent;\n"
+"border: none;\n"
+"border-radius: 5px;\n"
+"}\n"
+"")
+        self.tableWidget_2.setObjectName("tableWidget_2")
+        self.tableWidget_2.setColumnCount(0)
+        self.tableWidget_2.setRowCount(0)
+        self.verticalLayout_4.addWidget(self.tableWidget_2)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_4.addItem(spacerItem2)
         self.horizontalLayout_5.addWidget(self.Layouttime)
         self.a = QtWidgets.QFrame(self.widget)
         self.a.setMaximumSize(QtCore.QSize(678, 16777215))
@@ -597,11 +434,12 @@ class Ui_Main(object):
         self.verticalLayout_6.setObjectName("verticalLayout_6")
         self.lbCam = QtWidgets.QLabel(self.a)
         self.lbCam.setMaximumSize(QtCore.QSize(680, 428))
-        self.lbCam.setStyleSheet("QLabel{\n"
-"border-radius: 20px\n"
+        self.lbCam.setStyleSheet("#lbCam{\n"
+"border-radius: 0.5px;\n"
 "}")
-        self.lbCam.setFrameShape(QtWidgets.QFrame.NoFrame)
-        self.lbCam.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.lbCam.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.lbCam.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.lbCam.setLineWidth(0)
         self.lbCam.setText("")
         self.lbCam.setScaledContents(True)
         self.lbCam.setObjectName("lbCam")
@@ -622,12 +460,23 @@ class Ui_Main(object):
         self.horizontalLayout_8.addWidget(self.label_19)
         self.StartButton = QtWidgets.QPushButton(self.a)
         self.StartButton.setMaximumSize(QtCore.QSize(9, 12))
-        self.StartButton.setStyleSheet("background: rgba(85, 89, 93, 0.5);\n"
-"border-right: 1px solid #000000;")
+        self.StartButton.setStyleSheet("QPushButton{\n"
+"box-sizing: border-box;\n"
+"background:transparent;\n"
+"position: absolute;\n"
+"width: 678.1px;\n"
+"height: 1065.92px;\n"
+"left: 1049.9px;\n"
+"top: 51.08px;\n"
+"\n"
+"\n"
+"background-color: transparent;\n"
+"border-left: 1px solid #000000;\n"
+"}")
         self.StartButton.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("res/icon/pause.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.StartButton.setIcon(icon1)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap("res/icon/pause.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.StartButton.setIcon(icon3)
         self.StartButton.setObjectName("StartButton")
         self.horizontalLayout_8.addWidget(self.StartButton)
         self.n = QtWidgets.QLabel(self.a)
@@ -729,8 +578,8 @@ class Ui_Main(object):
 "flex-grow: 0;")
         self.label_38.setObjectName("label_38")
         self.horizontalLayout_12.addWidget(self.label_38)
-        spacerItem15 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_12.addItem(spacerItem15)
+        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_12.addItem(spacerItem3)
         self.label_37 = QtWidgets.QLabel(self.a)
         self.label_37.setStyleSheet("width: 127px;\n"
 "height: 16px;\n"
@@ -778,8 +627,8 @@ class Ui_Main(object):
 "flex-grow: 0;")
         self.label_41.setObjectName("label_41")
         self.horizontalLayout_13.addWidget(self.label_41)
-        spacerItem16 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_13.addItem(spacerItem16)
+        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_13.addItem(spacerItem4)
         self.label_39 = QtWidgets.QLabel(self.a)
         self.label_39.setStyleSheet("width: 116px;\n"
 "height: 16px;\n"
@@ -827,8 +676,8 @@ class Ui_Main(object):
 "flex-grow: 0;")
         self.label_42.setObjectName("label_42")
         self.horizontalLayout_14.addWidget(self.label_42)
-        spacerItem17 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_14.addItem(spacerItem17)
+        spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_14.addItem(spacerItem5)
         self.label_40 = QtWidgets.QLabel(self.a)
         self.label_40.setStyleSheet("width: 121px;\n"
 "height: 16px;\n"
@@ -852,8 +701,8 @@ class Ui_Main(object):
         self.label_40.setObjectName("label_40")
         self.horizontalLayout_14.addWidget(self.label_40)
         self.verticalLayout_6.addLayout(self.horizontalLayout_14)
-        spacerItem18 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_6.addItem(spacerItem18)
+        spacerItem6 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_6.addItem(spacerItem6)
         self.label_28 = QtWidgets.QLabel(self.a)
         self.label_28.setStyleSheet("width: 114px;\n"
 "height: 17px;\n"
@@ -934,8 +783,8 @@ class Ui_Main(object):
         self.verticalLayout_7.addWidget(self.comboBox_3)
         self.horizontalLayout_10.addLayout(self.verticalLayout_7)
         self.horizontalLayout_9.addLayout(self.horizontalLayout_10)
-        spacerItem19 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_9.addItem(spacerItem19)
+        spacerItem7 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_9.addItem(spacerItem7)
         self.horizontalLayout_11 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_11.setObjectName("horizontalLayout_11")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout()
@@ -983,12 +832,12 @@ class Ui_Main(object):
         self.horizontalLayout_11.addLayout(self.verticalLayout_3)
         self.horizontalLayout_9.addLayout(self.horizontalLayout_11)
         self.verticalLayout_6.addLayout(self.horizontalLayout_9)
-        spacerItem20 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_6.addItem(spacerItem20)
+        spacerItem8 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_6.addItem(spacerItem8)
         self.horizontalLayout_17 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_17.setObjectName("horizontalLayout_17")
-        spacerItem21 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_17.addItem(spacerItem21)
+        spacerItem9 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_17.addItem(spacerItem9)
         self.label_43 = QtWidgets.QLabel(self.a)
         self.label_43.setMaximumSize(QtCore.QSize(20, 18))
         self.label_43.setText("")
@@ -1008,23 +857,19 @@ class Ui_Main(object):
     def retranslateUi(self, Main):
         _translate = QtCore.QCoreApplication.translate
         Main.setWindowTitle(_translate("Main", "MainWindow"))
+        self.label_2.setText(_translate("Main", "TextLabel"))
         self.label_8.setText(_translate("Main", "TextLabel"))
         self.pushButton_2.setText(_translate("Main", "PushButton"))
-        self.label_7.setText(_translate("Main", "Thời gian"))
-        self.label_6.setText(_translate("Main", "Loại cảnh báo"))
-        self.label_5.setText(_translate("Main", "Thiết bị cảnh báo"))
-        self.label_4.setText(_translate("Main", "Độ ưu tiên"))
-        self.label_3.setText(_translate("Main", "Trạng thái xử lí"))
-        self.label_12.setText(_translate("Main", "02/12/2022"))
-        self.label_11.setText(_translate("Main", "Phát hiện di chuyển"))
-        self.label_10.setText(_translate("Main", "Cameara văn phòng"))
-        self.label_9.setText(_translate("Main", "Bình thường"))
-        self.label_2.setText(_translate("Main", "Chưa xử lí"))
-        self.label_15.setText(_translate("Main", "17/11/2022 "))
-        self.label_17.setText(_translate("Main", "Kích hoạt thủ công"))
-        self.label_16.setText(_translate("Main", "Obox Alarm 01"))
-        self.label_14.setText(_translate("Main", "Khẩn cấp"))
-        self.label_13.setText(_translate("Main", "Chưa xử lí"))
+        item = self.tableWidget.horizontalHeaderItem(0)
+        item.setText(_translate("Main", "Thời gian"))
+        item = self.tableWidget.horizontalHeaderItem(1)
+        item.setText(_translate("Main", "Loại cảnh báo"))
+        item = self.tableWidget.horizontalHeaderItem(2)
+        item.setText(_translate("Main", "Thiết bị cảnh báo"))
+        item = self.tableWidget.horizontalHeaderItem(3)
+        item.setText(_translate("Main", "Độ ưu tiên"))
+        item = self.tableWidget.horizontalHeaderItem(4)
+        item.setText(_translate("Main", "Trạng thái xử lí"))
         self.label_25.setText(_translate("Main", "Chi tiết báo động"))
         self.label_38.setText(_translate("Main", "Thời gian:"))
         self.label_37.setText(_translate("Main", "02/12/2022 10:03:12"))
